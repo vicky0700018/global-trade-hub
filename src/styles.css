@@ -228,7 +228,7 @@ a { color: inherit; text-decoration: none; }
 .intro-image-wrap, .about-photo, .service-detail-photo { position: relative; overflow: hidden; }
 .intro-image-wrap img, .about-photo img, .service-detail-photo img { width: 100%; aspect-ratio: 4/3.3; object-fit: cover; transition: transform 1s; }
 .intro-image-wrap:hover img, .about-photo:hover img { transform: scale(1.04); }
-.image-caption, .image-ribbon { position: absolute; left: 0; bottom: 0; background: var(--navy); color: var(--paper); padding: 1rem 1.4rem; font-family: var(--font-display); font-size: 1.15rem; max-width: 80%; border-top: 2px solid var(--gold); }
+.image-caption { position: absolute; left: 0; bottom: 0; background: var(--navy); color: var(--paper); padding: 1rem 1.4rem; font-family: var(--font-display); font-size: 1.15rem; max-width: 80%; border-top: 2px solid var(--gold); }
 .values-row, .values-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
 .values-row > *, .values-list > * { border-top: 1px solid var(--gold); padding-top: 1rem; color: var(--charcoal); font-size: .92rem; line-height: 1.6; }
 .values-row h3, .values-list h3, .values-list strong { font-size: 1.25rem; display: block; margin-bottom: .4rem; }
@@ -438,3 +438,7 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+.image-ribbon { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0; background: var(--navy); }
+.image-ribbon > * { overflow: hidden; }
+.image-ribbon img { width: 100%; height: 260px; object-fit: cover; transition: transform .9s; }
+.image-ribbon img:hover { transform: scale(1.06); }
